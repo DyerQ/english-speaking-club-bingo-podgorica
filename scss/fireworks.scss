@@ -1,0 +1,35 @@
+// Kudos to Nic: https://codepen.io/nicm42/pen/ExbZmPy
+// Source for ../css/fireworks.css
+@use "sass:math";
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.firework {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+@keyframes launchFirework {
+  to {
+    opacity: 0;
+  }
+}
+
+@for $i from 1 through 50 {
+  @keyframes launchFirework#{$i} {
+    to {
+      transform: translate(random(201) - 101 + px, random(201) - 101 + px);
+    }
+  }
+  .firework#{$i} {
+    animation: launchFirework random(1001) + 999 + ms linear forwards, launchFirework#{$i} random(1001) + 999 + ms linear forwards;
+  }
+}
