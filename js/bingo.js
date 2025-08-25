@@ -123,7 +123,7 @@ const events = [
         '🙊 Other language(s) spoken'
     ], [ // entourage
         '🪑🪑 Joined tables',
-        '☕ Drinking coffee',
+        '☕ Drinking hot beverages',
         '📄 Paper cards',
         '⬜ Writing on whiteboard',
         '🖼 Hand-drawn pictures'
